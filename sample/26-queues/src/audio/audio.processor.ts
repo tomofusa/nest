@@ -10,6 +10,7 @@ export class AudioProcessor {
   handleTranscode(job: Job) {
     this.logger.debug('Start transcoding...');
     this.logger.debug(job.data);
+    job.finished;
     this.logger.debug('Transcoding completed');
   }
 }

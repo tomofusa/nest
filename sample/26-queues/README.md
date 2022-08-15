@@ -28,6 +28,28 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Before Installation
+
+### redis and bull-board
+
+```bash
+docker compose up -d
+```
+
+access to `http://localhost:3000`
+
+
+
+### bull-repl
+```bash
+npm install bull-repl -g
+```
+
+```bash
+bull-repl
+BULL-REPL> help
+```
+
 ## Installation
 
 ```bash
@@ -46,6 +68,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+access to `http://localhost:4000`
 
 ## Test
 

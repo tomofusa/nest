@@ -1,6 +1,31 @@
-version: "3"
+version: '3.5'
+
 services:
   redis:
-    image: redis:alpine
+    container_name: redis
+    # Elasticache for Redisの Support version
+    image: redis:6.2
+    restart: always
     ports:
       - 6379:6379
+    volumes:
+      - ./redis_db_data:/data
+
+  bullboard:
+    container_name: bullboard
+    image: deadly0/bull-board
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: example-password
+      REDIS_USE_TLS: 'false'
+      BULL_PREFIX: bull
+    depends_on:
+      - redis
+
+volumes:
+  redis_db_data:
+    external: false

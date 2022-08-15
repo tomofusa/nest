@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+/redis_db_data
+yarn.lock
 
 # Logs
 logs
