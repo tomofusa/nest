@@ -36,7 +36,7 @@
 docker compose up -d
 ```
 
-access to `http://localhost:3000`
+access to `http://localhost:3030`
 
 
 
@@ -69,7 +69,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-access to `http://localhost:4000`
+access to `http://localhost:3000`
 
 ## Test
 
